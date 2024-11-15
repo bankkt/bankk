@@ -1,0 +1,11 @@
+from googletrans import Translator
+
+def translate_text(text, dest_language='zh-cn'):
+    translator = Translator()
+    translation = translator.translate(text, dest=dest_language)
+    return translation.text
+
+if __name__ == "__main__":
+    text_to_translate = input("请输入要翻译的英文文本: ")
+    translated_text = translate_text(text_to_translate)
+    print("翻译结果:", translated_text)
